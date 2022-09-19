@@ -1,13 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: org.example.SqlTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.06 s <<< FAILURE! - in org.example.SqlTest
-org.example.SqlTest.testSum  Time elapsed: 0.037 s  <<< ERROR!
-java.lang.NumberFormatException: null
-	at java.base/java.lang.Integer.parseInt(Integer.java:622)
-	at java.base/java.lang.Integer.parseInt(Integer.java:778)
-	at org.example.MyApp.Sum(MyApp.java:56)
-	at org.example.SqlTest.testSum(SqlTest.java:30)
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.053 s <<< FAILURE! - in org.example.SqlTest
+org.example.SqlTest.testSelectById  Time elapsed: 0.034 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.example.Employee.getId()" because "employee" is null
+	at org.example.MyApp.SelectById(MyApp.java:64)
+	at org.example.SqlTest.testSelectById(SqlTest.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

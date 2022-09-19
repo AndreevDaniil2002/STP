@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.SqlTest" time="0.06" tests="2" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.SqlTest" time="0.053" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="16"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-16.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\adany\AppData\Local\Temp\surefire15377542252910056559\surefirebooter-20220912233601722_3.jar C:\Users\adany\AppData\Local\Temp\surefire15377542252910056559 2022-09-12T23-36-01_410-jvmRun1 surefire-20220912233601722_1tmp surefire_0-20220912233601722_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\adany\AppData\Local\Temp\surefire17933531078548027950\surefirebooter-20220918172342910_3.jar C:\Users\adany\AppData\Local\Temp\surefire17933531078548027950 2022-09-18T17-23-42_613-jvmRun1 surefire-20220918172342910_1tmp surefire_0-20220918172342910_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\ВУЗ\ModernTechologyofProgramming\EmployeesDB\target\test-classes;D:\ВУЗ\ModernTechologyofProgramming\EmployeesDB\target\classes;C:\Users\adany\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.0\junit-jupiter-engine-5.9.0.jar;C:\Users\adany\.m2\repository\org\junit\platform\junit-platform-engine\1.9.0\junit-platform-engine-1.9.0.jar;C:\Users\adany\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\adany\.m2\repository\org\junit\platform\junit-platform-commons\1.9.0\junit-platform-commons-1.9.0.jar;C:\Users\adany\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.0\junit-jupiter-api-5.9.0.jar;C:\Users\adany\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\adany\AppData\Local\Temp\surefire15377542252910056559\surefirebooter-20220912233601722_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\adany\AppData\Local\Temp\surefire17933531078548027950\surefirebooter-20220918172342910_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="16.0.2+7-67"/>
@@ -43,7 +43,7 @@
     <property name="localRepository" value="C:\Users\adany\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\adany\AppData\Local\Temp\"/>
-    <property name="idea.version" value="2022.2.1"/>
+    <property name="idea.version" value="2022.2.2"/>
     <property name="java.version" value="16.0.2"/>
     <property name="user.dir" value="D:\ВУЗ\ModernTechologyofProgramming\EmployeesDB"/>
     <property name="os.arch" value="amd64"/>
@@ -56,12 +56,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="60.0"/>
   </properties>
-  <testcase name="testSum" classname="org.example.SqlTest" time="0.037">
-    <error message="null" type="java.lang.NumberFormatException"><![CDATA[java.lang.NumberFormatException: null
-	at java.base/java.lang.Integer.parseInt(Integer.java:622)
-	at java.base/java.lang.Integer.parseInt(Integer.java:778)
-	at org.example.MyApp.Sum(MyApp.java:56)
-	at org.example.SqlTest.testSum(SqlTest.java:30)
+  <testcase name="testSelectById" classname="org.example.SqlTest" time="0.034">
+    <error message="Cannot invoke &quot;org.example.Employee.getId()&quot; because &quot;employee&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "org.example.Employee.getId()" because "employee" is null
+	at org.example.MyApp.SelectById(MyApp.java:64)
+	at org.example.SqlTest.testSelectById(SqlTest.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -135,5 +133,4 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 ]]></error>
   </testcase>
-  <testcase name="testSelectById" classname="org.example.SqlTest" time="0.004"/>
 </testsuite>
