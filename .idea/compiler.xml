@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="calculator_1" />
+        <module name="Vectors" />
+        <module name="Library" />
+        <module name="EmployeesDB" />
+        <module name="sem5" />
+        <module name="Lab3_Text_Parser" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
