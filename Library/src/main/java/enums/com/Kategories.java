@@ -6,5 +6,6 @@ public enum Kategories {
     Business_Finance,
     Politics,
     Travel_books,
-    Autobiography
+    Autobiography,
+    Roman
 }

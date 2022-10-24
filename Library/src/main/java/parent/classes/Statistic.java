@@ -1,16 +1,12 @@
 package parent.classes;
 
-import child.classes.Customer;
-
 public class Statistic {
     Book book;
-    Customer reader;
-    boolean isAvailable;
+    Person reader;
 
-    public Statistic(Book book, Customer reader, boolean isAvailable) {
+    public Statistic(Book book, Person reader) {
         this.book = book;
         this.reader = reader;
-        this.isAvailable = isAvailable;
     }
 
     public Book getBook() {
@@ -21,19 +17,11 @@ public class Statistic {
         this.book = book;
     }
 
-    public Customer getReader() {
+    public Person getReader() {
         return reader;
     }
 
-    public void setReader(Customer reader) {
+    public void setReader(Person reader) {
         this.reader = reader;
-    }
-
-    public boolean isAvailable() {
-        return isAvailable;
-    }
-
-    public void setAvailable(boolean available) {
-        isAvailable = available;
     }
 }

@@ -9,9 +9,10 @@ public class Book {
     int Izdanie;
     String Publisher;
     int Year;
+    int Rating;
     Kategories Kategory;
 
-    public Book(int id, String name, String author, int izdanie, String publisher, int year, Kategories kategory){
+    public Book(int id, String name, String author, int izdanie, String publisher, int year, Kategories kategory, int rating){
         this.setId(id);
         this.setAuthor(author);
         this.setIzdanie(izdanie);
@@ -19,6 +20,7 @@ public class Book {
         this.setName(name);
         this.setYear(year);
         this.setKategory(kategory);
+        this.setRating(rating);
     }
 
     public String getName() {
@@ -73,6 +75,12 @@ public class Book {
 
     public void setId(int id){
         this.Id = id;
+    }
+
+    public void setRating(int rating){this.Rating = rating;}
+
+    public int getRating(){
+        return Rating;
     }
 
 
