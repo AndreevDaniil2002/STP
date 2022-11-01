@@ -92,7 +92,7 @@ public class Main {
                 numbers.add(b-a);
             else if (Objects.equals(sign, "*"))
                 numbers.add(b*a);
-            //System.out.println(numbers.getLast());
+            System.out.println(numbers.getLast());
             number_count --;
     }
 }
