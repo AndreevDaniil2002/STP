@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script
+			src="https://code.jquery.com/jquery-3.6.4.min.js"
+			integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+			crossorigin="anonymous"></script>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+	<style type="text/css">
+		#container {
+			width: 100%; height: 100%; margin: 0; padding: 0;
+		}
+	</style>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Главная</title>
+
+<th:block th:replace="fragments/styles :: common"></th:block>
+
+</head>
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+
+			<th:block th:replace="fragments/sidemenu :: menu"></th:block>
+			<th:block th:replace="fragments/topmenu :: menu"></th:block>
+
+			<div class="right_col" role="main">
+			
+				<th:block th:replace="fragments/toptiles :: tiles"></th:block>
+				<div id="container"></div>
+			</div>
+
+		</div>
+	</div>
+	<th:block th:replace="fragments/scripts :: common"></th:block>
+</body>
+<script th:inline="javascript">
+	$(document).ready(function() {
+		var members = [];
+		function initMembers() {
+			$.get('rest/issue/gist', function (data) {
+				if (data) {
+					members = data;
+				}
+			}).done(function (members) {
+				anychart.onDocumentReady(function () {
+					console.log(members)
+
+					result = {}
+					for (var i = 0; i < members.length; i++) {
+						members[i].issueDate = members[i].issueDate.slice(0, 10)
+						if (members[i].issueDate in result)
+							result[members[i].issueDate] = result[members[i].issueDate] + 1;
+						else
+							result[members[i].issueDate] = 1
+					}
+
+					// Создание гистограммы
+					var chart = anychart.column();
+
+					// Создание набора данных
+					var series = chart.column(Object.entries(result));
+
+					// Добавление подписей к осям
+					chart.xAxis().title("День");
+					chart.yAxis().title("Количество книг");
+
+					// Добавление подписи к графику
+					chart.title("Количество выданных книг по дням");
+
+					// Настройка элемента контейнера
+					chart.container("container");
+
+					// Отображение гистограммы
+					chart.draw();
+
+				})
+			});
+		}
+		initMembers();
+	})
+
+</script>
+</html>
